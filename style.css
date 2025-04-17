@@ -44,8 +44,8 @@ a {
 }
 
 .current-temperature-icon {
-  font-size: 44px;
-  margin-top: 16px;
+  width: 88px;
+  height: 88px;
 }
 
 .current-temperature-unit {

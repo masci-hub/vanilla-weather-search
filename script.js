@@ -39,7 +39,10 @@ function displayWeather(response) {
   let currentWind = response.data.wind.speed;
   let currentDateElement = document.querySelector("#current-date");
   let currentDate = new Date(response.data.time * 1000);
+  let currentIconElement = document.querySelector("#current-icon");
+  let currentIcon = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
 
+  currentIconElement.innerHTML = currentIcon;
   currentDateElement.innerHTML = formatDate(currentDate);
   currentWindElement.innerHTML = `${currentWind}km/h`;
   currentHumidityElement.innerHTML = `${currentHumidity}%`;
@@ -64,4 +67,4 @@ function handleSearch(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSearch);
 
-searchCity("Paris");
+searchCity("Rome");
